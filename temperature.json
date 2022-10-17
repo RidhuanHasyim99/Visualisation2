@@ -1,0 +1,58 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 1200,
+    "height": 600,
+    "config": {
+        "style": {
+          "cell": {
+            "stroke": "transparent"
+          }
+        },
+        "axis": {"labelColor": "black", "gridOpacity": 0, "titleOpacity": 0, "domainOpacity": 0, "tickOpacity": 0},
+        "axisY": {"labelOpacity": 0},
+        "legend": {"disable": true},
+        "background" : "#ffffff",
+        "font": "Verdana"
+        
+      },
+    "data": {
+      "url": "data/temperature.csv"
+    },
+    "mark": {
+      "type": "area",
+      "interpolate":"monotone",
+      "line": {
+        "color": "black", "interpolate":"monotone"
+      },
+      "color": {
+        "x1": 1,
+        "y1": 1,
+        "x2": 1,
+        "y2": 0,
+        "gradient": "linear",
+        "stops": [
+          {
+            "offset": 0,
+            "color": "skyblue"
+          },
+          {
+            "offset": 1,
+            "color": "red"
+          }
+        ]
+      }
+    },
+    "encoding": {
+      "x": {
+        "field": "Year",
+        "type": "temporal"
+      },
+      "y": {
+        "field": "Value",
+        "type": "quantitative"
+      },
+      "tooltip": [{"field": "Year", "type": "temporal", "timeUnit":"year", "title": "Year"},
+        {"field": "Value", "type": "quantitative", "title": "Temperature Anomaly"}
+    ]
+    }
+  }

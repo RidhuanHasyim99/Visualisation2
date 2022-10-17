@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+<script src="test.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="styles.css" media="all">
+<link rel="icon" href="data/icon.png">
+<title>Effects of Population Growth</title>
+</head>
+<body>
+
+  <div id="home">
+    <div>
+      <h2><b>POPULATION GROWTH </b> <!--<i class="material-icons">keyboard_double_arrow_up</i></h2>-->
+      <h3> ENVIRONMENTAL EFFECTS</h3>
+    </div>
+  </div>
+
+  <div class="top">
+    <div id="firstannotate">
+      <span id="dot"></span>
+      <hr id="line" size="2" width="60%" color="black"> 
+      <p>Greenland remains least dense country</p>
+    </div>
+    <div id="secondannotate">
+      <p>India is only 25th most dense country</p>
+      <hr id="line2" size="2" width="80%" color="black"> 
+      <span id="dot2"></span>
+    </div>
+    
+    <div id="chart"></div>
+     <div id="firsttext">
+        <p>The human population has always been growing. However,
+        <br>the population gowth rate is also constantly increasing.
+        <br> The map shows the immense density of each country.
+        <br>But what does it mean for the earth and our environment? 
+        <br> This visualisation explores the consequences and 
+        <br> effects that the growing population has on the
+        <br> environment.
+      </p>
+    </div>
+  </div>
+
+    <div class="container">
+      <div class="column1">
+        <i class="material-icons">cloud</i>
+        <h1>AIR POLLUTION</h1>
+        <p>The more our population grows, the more waste we produce. <br>
+          A concerning form of waste is the toxic gases that we release<br>
+          into the air. The largest toxic contributor is sulfur oxide. <br>
+          The graph shows the amount of sulfer oxide emitted yearly.</p>
+        <div id="airemissionchart"></div>
+        <p>The toxic gases that we release are a result of our daily<br>
+          daily acitvities. The graph below shows the contributors of<br>
+          air pollution. Without porper addressing, air pollution will<br>
+          affect the air quality that we breath and can also increase <br>
+          surface temperature in some cases</p>
+        <div id="airchart"></div>
+      </div>
+
+      <div class="column2">
+        <i class="material-icons">park</i>
+        <h1>DEFORESTATION</h1>
+        <p>Growing population leads to acquiring more space for various <br>
+          necessary purposes. As a result, more and more forests are being <br>
+          cleared for space. The Chart below shows the amount of forest <br>
+          loss that earth suffered. Measured in Hectare.</p>
+        <div id="forestchart"></div>
+        <p>Large amounts of forests are cleared, but what are the main drivers?<br>
+          A substantial percentage of purposeful deforestations are caused<br>
+          by humankind and their ever-growing population growth.<br>
+          The main causes of purposeful deforestation are as follows:</p>
+        <div id = "driversforestchart"></div>
+      </div>
+
+      <div class="column3">
+        <i class="material-icons">water_drop</i>
+        <h1>WATER POLLUTION</h1>
+        <p>As mentioned, a larger population equates to more waste produced.<br>
+          The issue is that waste disposal is not treated with good practice.<br>
+          A substantial amount of waste such as oil and plastics are dumped in<br>
+          the ocean. As a result, many are left with no access to clean water.</p>
+        <div id="nocleanwaterchart"></div>
+        <p>The chart below explores the contributors of water pollution.<br>
+          The result of all this contributors can endanger sealife and affect<br>
+          clean accessible water. In some cases, the pollution can even release<br>
+          toxic and greenhouse gases that affecs climate change.</p>
+        <div id = "waterchart"></div>
+      </div>
+    </div>
+
+    <div class="bottom">
+      <h1>CLIMATE CHANGE</h1>
+      <h2>CONSEQUENCES</h2>
+      <p>Despite the slow improvements on the degradation of environment<br>
+        The effects of global warming has not diminished. Deforestation, <br>
+        water and air pollution still contributes greatly to climate change <br>
+        to this day. The world map shows the average recorded temperature <br>
+        of each country. The global average temperature has <b style="color: rgb(255, 102, 72)">risen by 1.1°C </b><br>
+        since 1880 and a small increase can have catastrophic results. <br>
+        <br>  <br>
+        <i style="color: grey">* countries colored grey do not have sufficient data</i>
+      </p>
+      <div id="rotatechart"></div>
+
+      <div class="last">
+        <h1>TEMPERATURE ANOMALIES</h1>
+        <h2>OVER THE YEARS</h2>
+        <p>In order to observe the impact of global warming, we measure the global <br>
+          temperature anomaly through the years. A positive anomaly indicates that <br>
+          the observed temperature was warmer than the average global temperature, <br>
+          while a negative anomaly indicates that the observed temperature was cooler <br>
+          than the average. From this graph, we can see that the anomalies are on <br>
+          a steady increase which implies that the rate of global warming has increased.
+        </p>
+        <div id="thirdannotate">
+          <p>Highest Anomaly at 0.98°C</p>
+          <hr id="line3" size="2" width="70%" color="black"> 
+          <span id="dot3"></span>
+        </div>
+        <div id="tempchart"></div>
+      </div>
+
+      <div id="recycle">
+        <h1>COMBAT GLOBAL WARMING</h1>
+        <h2>START RECYCLING</h2>
+        <p id="rtext">In order to observe the impact of global warming, we measure the global <br>
+          temperature anomaly through the years. A positive anomaly indicates that <br>
+          the observed temperature was warmer than the average global temperature, <br>
+          while a negative anomaly indicates that the observed temperature was cooler <br>
+          than the average. From this graph, we can see that the anomalies are on <br>
+          a steady increase which implies that the rate of global warming has increased.
+        </p>
+        <div id="recyclechart">
+          <h3>1 TON OF PAPER RECYCLED SAVES:</h3>
+          <div id="trees">
+            <i class="material-icons">park</i><i class="material-icons">park</i><i class="material-icons">park</i><i class="material-icons">park</i><i class="material-icons">park</i><i class="material-icons">park</i><i class="material-icons">park</i>
+            <p>7 TREES</p>
+          </div>
+          <div id="bottles">
+            <i class="material-icons">water_drop</i><i class="material-icons">water_drop</i><i class="material-icons">water_drop</i><i class="material-icons">water_drop</i><i class="material-icons">water_drop</i><i class="material-icons">water_drop</i>
+            <p>60,000 GALLONS OF WATER</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+
+
+    <section id="footer">
+        <p>made by ridhuan</p>
+    </section>
+</body>
+</html>

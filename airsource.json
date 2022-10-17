@@ -1,0 +1,27 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 300,
+    "height": 150,
+    "config": {
+        "background": "#e7e7e7",
+        "view": {"stroke": null},
+        "font": "Verdana"
+    },
+    "data": {"url": "data/airsource.csv"},
+    "encoding": {
+      "theta": {"field": "Percentage", "type": "quantitative", "stack": true},
+      "color": {"field": "Source", "type": "nominal", "legend": null, "scale": {"type": "sqrt", "scheme": "warmgreys"}},
+      "tooltip": [
+        {"field": "Source", "type": "nominal", "title": "Source"},
+        {"field": "Percentage", "type": "quantitative", "title": "Percentage"}
+    ]
+    },
+    "layer": [{
+      "mark": {"type": "arc", "innerRadius": 40}
+    }, {
+      "mark": {"type": "text", "radius": 110,  "fontStyle": "italic", "fontWeight": "bold"},
+      "encoding": {
+        "text": {"field": "Source", "type": "nominal"}
+      }
+    }]
+  }

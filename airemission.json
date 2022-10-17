@@ -1,0 +1,30 @@
+  {
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 300,
+    "height": 150,
+    "title": "So2 emission",
+    "config": {
+        "background": "#e7e7e7",
+        "view": {"stroke": null, "strokeOpacity": 0},
+        "axis": {"tickOpacity":0},
+        "axisY": {"gridOpacity": 0, "titleOpacity": 0, "domainOpacity": 0, "tickOpacity": 0, "labelOpacity":0},
+        "font": "Verdana",
+        "title": {"fontWeight":"lighter", "font": "Verdana", "align": "left"}
+    },
+    "data": {"url": "data/airemission.csv"},
+    "mark": {
+      "type": "area",
+      "interpolate":"linear",
+      "line": {
+        "color": "black", "interpolate":"linear", "size":4
+      },
+      "opacity":0
+    },
+    "encoding": {
+      "x": {"field": "Year", "type": "ordinal", "title": null},
+      "y": {"field": "E", "type": "quantitative", "title": null},
+      "tooltip": [{"field": "Year", "type": "ordinal"},
+      {"field": "E", "type": "quantitative", "title": "S02", "format": ",.4r"}
+    ]
+    }
+  }

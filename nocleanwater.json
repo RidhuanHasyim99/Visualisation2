@@ -1,0 +1,30 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 300,
+    "height": 150,
+    "title": "% without clean water",
+    "config": {
+        "background": "#dcf3fe",
+        "view": {"stroke": null, "strokeOpacity": 0},
+        "axis": {"tickOpacity":0},
+        "axisY": {"gridOpacity": 0, "titleOpacity": 0, "domainOpacity": 0, "tickOpacity": 0, "labelOpacity":0},
+        "font": "Verdana",
+        "title": {"fontWeight":"lighter", "font": "Verdana", "align": "left"}
+    },
+    "data": {"url": "data/nocleanwater.csv"},
+    "mark": {
+      "type": "area",
+      "interpolate":"linear",
+      "line": {
+        "color": "darkblue", "interpolate":"linear", "size":4
+      },
+      "opacity":0
+    },
+    "encoding": {
+      "x": {"field": "Year", "type": "ordinal", "title": null},
+      "y": {"field": "Percentage", "type": "quantitative", "title": null},
+      "tooltip": [{"field": "Year", "type": "ordinal"},
+      {"field": "Percentage", "type": "quantitative", "title": "Percentage"}
+    ]
+    }
+  }
